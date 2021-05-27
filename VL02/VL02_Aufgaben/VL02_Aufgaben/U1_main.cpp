@@ -1,0 +1,18 @@
+#include "U1_ort.h"
+#include "U1_sehenswuerdigkeiten.h"
+#include "U1_restaurants.h"
+
+int main()
+{
+	U1_ort* orte[3];
+	orte[0] = new U1_ort("Stuttgart", { 1, 2 });
+	orte[1] = new U1_sehenswuerdigkeiten("Eiffelturm", { 5, 6 }, "ganz Paris");
+	orte[2] = new U1_restaurants("La Mange", { 6, 6 }, "die besten Baguette");
+
+	for (auto _ort : orte)
+	{
+		_ort->visit();
+	}
+
+	return 0;
+}
