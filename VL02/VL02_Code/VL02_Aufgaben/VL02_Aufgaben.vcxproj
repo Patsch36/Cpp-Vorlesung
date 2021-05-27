@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.210505.3\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.210505.3\build\native\Microsoft.Windows.CppWinRT.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -21,7 +22,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e7659bb7-6824-48ba-a075-25c9cc3cac8a}</ProjectGuid>
+    <ProjectGuid>{163af5ed-b914-4fe1-ac31-1f925c66474d}</ProjectGuid>
     <RootNamespace>VL02Aufgaben</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -139,13 +140,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="A1_User_main.cpp" />
-    <ClCompile Include="A1_User_User.cpp" />
+    <ClInclude Include="car.h" />
+    <ClInclude Include="Fortbewegungsmittel.h" />
+    <ClInclude Include="Horse.h" />
+    <ClInclude Include="Tesla.h" />
+    <ClInclude Include="Trabbi.h" />
+    <ClInclude Include="U1_ort.h" />
+    <ClInclude Include="U1_restaurants.h" />
+    <ClInclude Include="U1_sehenswuerdigkeiten.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="A1_User_User.h" />
+    <ClCompile Include="car.cpp" />
+    <ClCompile Include="Fortbewegungsmittel.cpp" />
+    <ClCompile Include="Horse.cpp" />
+    <ClCompile Include="main_BPS.cpp" />
+    <ClCompile Include="Tesla.cpp" />
+    <ClCompile Include="Trabbi.cpp" />
+    <ClCompile Include="U1_main.cpp" />
+    <ClCompile Include="U1_ort.cpp" />
+    <ClCompile Include="U1_restaurants.cpp" />
+    <ClCompile Include="U1_sehenswuerdigkeiten.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.210505.3\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.210505.3\build\native\Microsoft.Windows.CppWinRT.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.210505.3\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.210505.3\build\native\Microsoft.Windows.CppWinRT.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.210505.3\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.210505.3\build\native\Microsoft.Windows.CppWinRT.targets'))" />
+  </Target>
 </Project>
