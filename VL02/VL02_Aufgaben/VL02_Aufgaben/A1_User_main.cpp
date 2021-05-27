@@ -1,7 +1,7 @@
 #include "A1_User_User.h"
 #include <array>
 
-int main()
+int main_A1()
 {
 	std::array<std::string, 10> names = { "Peter", "Claudia", "Marie", "Lissie", "Clemens", "Luisa" , "Mia", "Micky", "Juergen", "Johann" };
 	std::array<A1_User_User*, names.size()> users;
