@@ -141,9 +141,14 @@
   <ItemGroup>
     <ClCompile Include="A1_User_main.cpp" />
     <ClCompile Include="A1_User_User.cpp" />
+    <ClCompile Include="A2_Bankkonten_Subkonten.cpp" />
+    <ClCompile Include="A2_Bankkonten_Konto.cpp" />
+    <ClCompile Include="A2_Bankkonten_main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="A1_User_User.h" />
+    <ClInclude Include="A2_Bankkonten_Subkonten.h" />
+    <ClInclude Include="A2_Bankkonten_Konto.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

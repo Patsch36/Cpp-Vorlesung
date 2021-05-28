@@ -21,9 +21,24 @@
     <ClCompile Include="A1_User_User.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="A2_Bankkonten_main.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="A2_Bankkonten_Konto.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="A2_Bankkonten_Subkonten.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="A1_User_User.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="A2_Bankkonten_Konto.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="A2_Bankkonten_Subkonten.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
