@@ -21,6 +21,9 @@
     <ClInclude Include="A1_Bankkonten_Subkonten.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="A2_Kanuteam_Klassen.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="A1_Bankkonten_main.cpp">
@@ -30,6 +33,12 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="A1_Bankkonten_Konto.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="A2_Kanuteam_main.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="A2_Kanuteam_Klassen.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
