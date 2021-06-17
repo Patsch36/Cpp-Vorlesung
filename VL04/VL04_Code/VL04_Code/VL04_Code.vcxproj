@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="iterieren.cpp" />
+    <ClCompile Include="sortieren_finden.cpp" />
     <ClCompile Include="UE1_Bankkonten_Konto.cpp" />
     <ClCompile Include="UE1_Bankkonten_main.cpp" />
     <ClCompile Include="UE1_Bankkonten_Subkonten.cpp" />

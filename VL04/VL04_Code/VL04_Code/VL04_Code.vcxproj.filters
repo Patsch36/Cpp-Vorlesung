@@ -27,6 +27,9 @@
     <ClCompile Include="iterieren.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="sortieren_finden.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UE1_Bankkonten_Konto.h">

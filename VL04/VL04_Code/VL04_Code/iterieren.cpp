@@ -4,7 +4,7 @@
 #include <algorithm>
 
 
-int main()
+int main_it()
 {
 
 	std::vector<int> vec = { 1, 2, 3, 4, 5 };
@@ -14,7 +14,7 @@ int main()
 		std::cout << *it << std::endl;
 	}
 
-	//Konst, um nichts zu kopieren
+
 	for (const int & i : vec)
 	{
 		std::cout << i << std::endl;
