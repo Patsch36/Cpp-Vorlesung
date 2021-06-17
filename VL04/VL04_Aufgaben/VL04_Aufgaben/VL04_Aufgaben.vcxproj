@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0a57c48b-e85d-4fcd-a763-8e328f009935}</ProjectGuid>
-    <RootNamespace>VL04Code</RootNamespace>
+    <ProjectGuid>{a378945d-d6ee-434a-9d5a-438e62bb4501}</ProjectGuid>
+    <RootNamespace>VL04Aufgaben</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -88,7 +88,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,15 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="iterieren.cpp" />
-    <ClCompile Include="sortieren_finden.cpp" />
-    <ClCompile Include="UE1_Bankkonten_Konto.cpp" />
-    <ClCompile Include="UE1_Bankkonten_main.cpp" />
-    <ClCompile Include="UE1_Bankkonten_Subkonten.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="UE1_Bankkonten_Konto.h" />
-    <ClInclude Include="UE1_Bankkonten_Subkonten.h" />
+    <ClCompile Include="Vektoren.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
