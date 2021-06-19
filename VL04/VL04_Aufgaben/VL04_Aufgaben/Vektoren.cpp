@@ -13,7 +13,7 @@ void printVec(std::vector<std::string> food)
     std::cout << std::endl;
 }
 
-int main()
+int mainVec()
 {
     std::vector<std::string> food = { "Eier", "Milch", "Zucker", "Schokolade", "Mehl" };
 
