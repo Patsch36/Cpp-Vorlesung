@@ -66,12 +66,12 @@ int main()
 		std::cout << "Found 3!" << std::endl;
 
 
-	auto sum = [](int result, const data& d) {
+	/*auto sum = [](int result, const data& d) {
 		return result += d._i;
-	};
-	/*auto sum = [](int result, const data* d) {
-		return result += d->_i;
 	};*/
+	auto sum = [](int result, const data* d) {
+		return result += d->_i;
+	};
 
 	int sumOfNumbers = std::accumulate(vec.begin(), vec.end(), 0, sum);
 	std::cout << sumOfNumbers << std::endl;

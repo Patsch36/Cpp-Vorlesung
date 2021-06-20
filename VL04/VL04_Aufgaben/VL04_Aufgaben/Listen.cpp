@@ -14,8 +14,23 @@ void printList(std::list<std::string> list)
     std::cout << std::endl;
 }
 
-bool lengthsort(std::list<std::string> s1, std::list<std::string> s2) {
-    return sizeof(s1) < sizeof(s2);
+bool lengthsort(std::string s1, std::string s2)
+{
+    return s1.length() < s2.length();
+}
+
+bool firstVocal(std::string s1, std::string s2)
+{
+    auto findFirstVocal = [](std::string s)
+    {
+        for (auto letter : s)
+        {
+            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
+                return letter;
+        }
+    };
+
+    return findFirstVocal(s1) < findFirstVocal(s2);
 }
 
 int main()
@@ -51,7 +66,10 @@ int main()
     /*set.emplace(milch, "Backpulver");
     printList(set);*/
 
-    std::sort(std::begin(set), std::end(set), lengthsort);
+    set.sort(lengthsort);
+    printList(set);
+
+    set.sort(firstVocal);
     printList(set);
 
     return 0;
