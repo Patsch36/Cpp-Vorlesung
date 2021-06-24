@@ -8,27 +8,27 @@
 
 
 // Elemente eines Vektors ausgeben
-void printVec(const std::vector<std::string> food)
+void printVec(const std::vector<std::string>& food)
 {
-    for (const auto entry : food)
+    for (const auto& entry : food)
         std::cout << entry << std::endl;
     std::cout << std::endl;
 }
 
 
 // Funktion um nach der Länge zu sortieren
-bool lengthsortVec(std::string s1, std::string s2)
+bool lengthsortVec(const std::string& s1, const std::string& s2)
 {
     return s1.length() < s2.length();
 }
 
 
-// Funktion, um nach dem ersten VOkal zu sortieren
-bool firstVocalVec(std::string s1, std::string s2)
+// Funktion, um nach dem ersten Vokal zu sortieren
+bool firstVocalVec(const std::string& s1, const std::string& s2)
 {
-    auto findFirstVocal = [](std::string s)
+    auto findFirstVocal = [](const std::string& s)
     {
-        for (auto letter : s)
+        for (const auto& letter : s)
         {
             if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u' ||
                 letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U')
@@ -39,11 +39,17 @@ bool firstVocalVec(std::string s1, std::string s2)
     return findFirstVocal(s1) < findFirstVocal(s2);
 }
 
+void deleteFirstElement(std::vector<std::string>& vec) {
+    if(vec.begin() != vec.end())
+        vec.erase(vec.begin());
+}
+
+
 int main()
 {
     // Erstellt einen leeren Vektor vom Typ string und printet ihn.
     std::vector<std::string> food;
-    
+    deleteFirstElement(food);
     printVec(food);
     
 
@@ -54,7 +60,7 @@ int main()
 
 
     // Entfernt das erste Element. Printet den Vektor.
-    food.erase(food.begin());
+    deleteFirstElement(food);
 
     printVec(food);
 
@@ -66,7 +72,7 @@ int main()
 
 
     // Ersetze das Item Zucker durch Honig, printe den Vector.
-     auto zucker = std::find_if(food.begin(), food.end(), [](std::string s) {
+     auto zucker = std::find_if(food.begin(), food.end(), [](const std::string& s) {
        return s == "Zucker";
         });
 
@@ -78,7 +84,7 @@ int main()
 
      // Suche nach Milch und entferne es. Printe den Vektor.
 
-     auto milch = std::find_if(food.begin(), food.end(), [](std::string s) {
+     auto milch = std::find_if(food.begin(), food.end(), [](const std::string& s) {
          return s == "Milch";
          });
 
