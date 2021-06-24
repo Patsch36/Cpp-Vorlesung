@@ -6,27 +6,59 @@
 #include <string>
 #include <algorithm>
 
-void printVec(std::vector<std::string> food)
+void printVec(const std::vector<std::string> food)
 {
-    for (auto entry : food)
+    for (const auto entry : food)
         std::cout << entry << std::endl;
     std::cout << std::endl;
 }
 
-int mainVec()
+bool lengthsortVec(std::string s1, std::string s2)
 {
-    std::vector<std::string> food = { "Eier", "Milch", "Zucker", "Schokolade", "Mehl" };
+    return s1.length() < s2.length();
+}
+
+bool firstVocalVec(std::string s1, std::string s2)
+{
+    auto findFirstVocal = [](std::string s)
+    {
+        for (auto letter : s)
+        {
+            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
+                return letter;
+        }
+    };
+
+    return findFirstVocal(s1) < findFirstVocal(s2);
+}
+
+int main()
+{
+    // Erstellt einen leeren Vektor vom Typ string und printet ihn.
+    std::vector<std::string> food;
+    
+    printVec(food);
+    
+
+    // Fügt die Strings “Eier”, “Milch”, “Zucker”, “Schokolade” und “Mehl” dazu. Printet ihn.
+    food.assign({ "Eier", "Milch", "Zucker", "Schokolade", "Mehl" });
 
     printVec(food);
 
+
+    // Entfernt das erste Element. Printet den Vektor.
     food.erase(food.begin());
 
     printVec(food);
 
+
+    // Füge Kaffee hinzu, printe.
     food.push_back("Kaffee");
 
     printVec(food);
 
+
+    // Ersetze das Item Zucker durch Honig, printe den Vector.
      auto zucker = std::find_if(food.begin(), food.end(), [](std::string s) {
        return s == "Zucker";
         });
@@ -34,7 +66,28 @@ int mainVec()
      if(zucker != food.end())
         *zucker = "Honig";
 
-    printVec(food);
+     printVec(food);
+
+
+     // Suche nach Milch und entferne es. Printe den Vektor.
+
+     auto milch = std::find_if(food.begin(), food.end(), [](std::string s) {
+         return s == "Milch";
+         });
+
+     if (milch != food.end())
+         food.erase(milch);
+
+     printVec(food);
+
+
+     // Sortierungen
+     std::sort(food.begin(), food.end(), lengthsortVec);
+     printVec(food);
+
+     std::sort(food.begin(), food.end(), firstVocalVec);
+     printVec(food);
+
 
     return 0;
 }

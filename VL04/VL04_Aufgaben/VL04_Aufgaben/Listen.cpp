@@ -33,7 +33,7 @@ bool firstVocal(std::string s1, std::string s2)
     return findFirstVocal(s1) < findFirstVocal(s2);
 }
 
-int main()
+int mainList()
 {
     std::list <std::string> set;
     printList(set);
