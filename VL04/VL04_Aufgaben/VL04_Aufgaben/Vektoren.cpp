@@ -6,6 +6,8 @@
 #include <string>
 #include <algorithm>
 
+
+// Elemente eines Vektors ausgeben
 void printVec(const std::vector<std::string> food)
 {
     for (const auto entry : food)
@@ -13,18 +15,23 @@ void printVec(const std::vector<std::string> food)
     std::cout << std::endl;
 }
 
+
+// Funktion um nach der Länge zu sortieren
 bool lengthsortVec(std::string s1, std::string s2)
 {
     return s1.length() < s2.length();
 }
 
+
+// Funktion, um nach dem ersten VOkal zu sortieren
 bool firstVocalVec(std::string s1, std::string s2)
 {
     auto findFirstVocal = [](std::string s)
     {
         for (auto letter : s)
         {
-            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
+            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u' ||
+                letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U')
                 return letter;
         }
     };
